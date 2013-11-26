@@ -1,0 +1,139 @@
+<!doctype html>
+<!--
+                   _     _
+                  | |   | |
+    ___ ___   ___ | | __| | _____      ___ __  ___
+   / __/ _ \ / _ \| |/ _` |/ _ \ \ /\ / / '_ \/ __|
+  | (_| (_) | (_) | | (_| | (_) \ V  V /| | | \__ \
+   \___\___/ \___/|_|\__,_|\___/ \_/\_/ |_| |_|___/
+
+  Because ASCII art matters...
+
+  I salute you young h@x0r.
+  I invite you to open the humans.txt file for more info about some cool stuff used to make this app.
+
+  May the source be with you :)
+
+  ~ngryman();
+-->
+<html manifest="manifest.appcache">
+
+<head>
+    <meta charset="utf-8">
+
+	<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+
+    <!--<base href="http://localhost:3000/">-->
+    <title>cooldowns.io</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="canonical" href="http://cooldowns.io">
+    <link href="favicon.ico" rel="icon">
+
+    <link href="app.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+	<h1>
+		<span class="blue">cool</span><span class="red">downs</span>.<span class="purple">i</span><span class="yellow">o</span>
+	</h1>
+	<aside class="share">
+		<iframe class="share-button" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcooldowns.io&amp;layout=button_count&amp;show_faces=false&amp;width=110&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=24" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:24px;" allowtransparency="true"></iframe>
+		<div class="share-button">
+			<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.1384994725.html#_=1385419665358&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fcooldowns.io&amp;related=ngryman&amp;size=m&amp;text=cooldowns.io%20-%20a%20simple%20jungle%20cooldowns%20manager%20for%20#LeagueOfLegends%20by%20%40ngryman.&amp;url=http%3A%2F%2Fcooldowns.io" class="twitter-share-button twitter-tweet-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 110px; height: 20px;"></iframe>
+		</div>
+	</aside>
+</header>
+
+<main>
+	<article id="tiles">
+		<section class="tile" data-type="red" data-team="blue">
+			<div class="tile-body">
+				<svg class="tile-knob" viewBox="0 0 200 200">
+					<path/>
+				</svg>
+				<div class="tile-content">
+					<time></time>
+				</div>
+				<h2>Ennemy red</h2>
+			</div>
+		</section>
+		<section class="tile" data-type="blue" data-team="blue">
+			<div class="tile-body">
+				<svg class="tile-knob" viewBox="0 0 200 200">
+					<path/>
+				</svg>
+				<div class="tile-content">
+					<time></time>
+				</div>
+				<h2>Ennemy blue</h2>
+			</div>
+		</section>
+		<section class="tile" data-type="blue" data-team="purple">
+			<div class="tile-body">
+				<svg class="tile-knob" viewBox="0 0 200 200">
+					<path/>
+				</svg>
+				<div class="tile-content">
+					<time></time>
+				</div>
+				<h2>Your blue</h2>
+			</div>
+		</section>
+		<section class="tile" data-type="red" data-team="purple">
+			<div class="tile-body">
+				<svg class="tile-knob" viewBox="0 0 200 200">
+					<path/>
+				</svg>
+				<div class="tile-content">
+					<time></time>
+				</div>
+				<h2>Your red</h2>
+			</div>
+		</section>
+		<section class="tile tile-large" data-type="nashor">
+			<div class="tile-body">
+				<svg class="tile-knob" viewBox="0 0 200 200">
+					<path/>
+				</svg>
+				<div class="tile-content">
+					<time></time>
+				</div>
+				<h2>Baron Nashor</h2>
+			</div>
+		</section>
+		<section class="tile tile-large" data-type="dragon">
+			<div class="tile-body">
+				<svg class="tile-knob" viewBox="0 0 200 200">
+					<path/>
+				</svg>
+				<div class="tile-content">
+					<time></time>
+				</div>
+				<h2>Dragon</h2>
+			</div>
+		</section>
+	</article>
+</main>
+
+<footer>
+	<a href="https://github.com/ngryman/cooldowns.io">Source on <em>Github</em></a> |
+	<a href="http://twitter.com/ngryman">Follow <strong>@ngryman</strong> on <em>Twitter</em></a>
+</footer>
+
+<!-- external deps, from a global cdn -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<!-- local deps -->
+<script src="vendor/raf.min.js"></script>
+
+<!--application-->
+<script src="app.js"></script>
+
+</body>
+</html>

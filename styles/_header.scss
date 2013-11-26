@@ -1,0 +1,58 @@
+header {
+	display: none;
+
+	@media (min-width: 700px) {
+		display: block;
+		position: absolute;
+		background-color: rgba(0, 0, 0, .6);
+		padding: 0 15px;
+		width: 100%;
+		height: 70px;
+		line-height: 65px;
+		text-align: justify;
+		-ms-text-justify: distribute-all-lines;
+		text-justify: distribute-all-lines;
+
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 100%;
+			height: 0;
+			font-size: 0;
+			line-height: 0;
+		}
+
+		> * {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		h1 {
+			color: #fff;
+			text-align: left;
+			line-height: 100%;
+			font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+			font-weight: 100;
+
+			.blue {
+				color: lighten($color-blue1, 10%);
+			}
+
+			.red {
+				color: #fff;
+			}
+
+			.purple {
+				color: lighten($color-red1, 10%);
+			}
+
+			.yellow {
+				color: lighten($color-red1, 10%);
+			}
+		}
+
+		.share {
+			text-align: right;
+		}
+	}
+}

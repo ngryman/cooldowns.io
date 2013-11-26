@@ -1,0 +1,20 @@
+# intellij
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# node
+node_modules
+npm-debug.log
+
+# cache
+.sass-cache
+
+# OS
+.DS_Store
+Desktop.ini
+._*
+Thumbs.db
+.Spotlight-V100
+.Trashes

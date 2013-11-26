@@ -1,0 +1,175 @@
+@import 'vars',
+		'utils';
+
+/**
+ * Mixins.
+ */
+
+@mixin tile-theme($type, $team, $color) {
+	@mixin decl($color) {
+		color: lighten($color, 20%);
+
+		.tile-body {
+			border: 1px solid lighten($color, 10%);
+			background-color: $color;
+			background-image: linear-gradient(45deg, $color, desaturate($color, 4%));
+		}
+
+		&[data-state=active] .tile-body,
+		&[data-state=soon] .tile-body,
+		&[data-state=end] .tile-body {
+			border-color: lighten($color, 20%);
+			box-shadow: 0 0 10px 0px lighten($color, 10%);
+		}
+
+		.tile-knob path {
+			fill: lighten($color, 20%);
+			stroke: lighten($color, 30%);
+		}
+	}
+
+	@if $team {
+		[data-type=#{$type}][data-team=#{$team}] {
+			@include decl($color);
+		}
+	}
+	@else {
+		[data-type=#{$type}] {
+			@include decl($color);
+		}
+	}
+}
+
+/**
+ * Module.
+ */
+
+.tile {
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	padding-bottom: 50%;
+	cursor: pointer;
+
+	@media (min-width: 410px) {
+		width: 200px;
+		height: 200px;
+		padding-bottom: 0;
+	}
+
+	&.is-tapped {
+		-webkit-animation: tap .1s linear alternate 2;
+		animation: tap .1s linear alternate 2;
+	}
+}
+
+.tile-body {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	bottom: 5px;
+	left: 5px;
+	font-size: 10px;
+
+	[data-state=active] &,
+	[data-state=soon] &,
+	[data-state=end] & {
+		border-radius: 50%;
+		@include transition(border-radius .1s);
+	}
+
+	h2 {
+		position: absolute;
+		bottom: 0;
+		padding: 3px;
+		font-size: 1.6em;
+		font-weight: normal;
+		color: #fff;
+
+		[data-state=active] &,
+		[data-state=soon] & {
+			left: 50%;
+			bottom: 10px;
+			width: 100%;
+			@include transform(translateX(-50%));
+		}
+
+		[data-state=end] & {
+			display: none;
+		}
+	}
+}
+
+.tile-content {
+	position: absolute;
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+
+	> * {
+		display: table-cell;
+		vertical-align: middle;
+		font-size: 9em;
+
+		[data-state=active] &,
+		[data-state=soon] &,
+		[data-state=end] & {
+			color: #fff;
+		}
+	}
+
+	[data-state=end] & time {
+		font-size: 3.5em;
+	}
+}
+
+.tile-knob {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+
+	[data-state=end] & {
+		opacity: 0;
+		@include transition(opacity 1s);
+	}
+
+	path {
+		stroke-width: 2;
+	}
+}
+
+.tile-go {
+	font-size: 6em;
+	text-transform: uppercase;
+}
+
+/**
+ * Themes.
+ */
+
+@include tile-theme('blue', 'blue', $color-blue1);
+@include tile-theme('blue', 'purple', $color-blue2);
+@include tile-theme('red', 'blue', $color-red1);
+@include tile-theme('red', 'purple', $color-red2);
+@include tile-theme('nashor', null, $color-purple);
+@include tile-theme('dragon', null, $color-yellow);
+
+@-webkit-keyframes tap {
+	to {
+		-webkit-transform: scale(.95);
+		opacity: .6;
+	}
+}
+
+@keyframes tap {
+	to {
+		transform: scale(.95);
+		opacity: .6;
+	}
+}
