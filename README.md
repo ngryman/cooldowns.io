@@ -13,16 +13,16 @@ Good jungling!
 
 ## Contribute
 
-Please see [contributing].
+See [contributing].
 
 [contributing]: CONTRIBUTING.md
 
 ## Release History
 
-```
-v0.0.1
- - initial release.
-```
+See [changelog].
+
+[changelog]: CHANGELOG.md
 
 [League of Legends]: http://leagueoflegends.com
 [jungling]: http://leagueoflegends.wikia.com/wiki/Jungling
+[cooldowns.io]: http://cooldowns.io
