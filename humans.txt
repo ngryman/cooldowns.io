@@ -17,11 +17,10 @@ All the open source community and particularly some very inspiring people:
 /* SITE */
 Last update: sometime between 2013 and 2100 (I hope to live old. And seriously? I will never update this).
 Standards: HTML5, CSS3, JavaScript (ECMA 5)
-Components: jQuery, jQuery Finger ;), Prism, Compass, Animate
-Software: IntelliJ 12, Chrome Dev Tools
+Components: Grunt, SASS, jQuery, raf.js,
+Software: WebStorm, Chrome Dev Tools
 
 /* WIHL (What I Have Learn) */
-- Use media queries w/ rem units
-- Use them in place with the beautiful SASS @content instruction: http://paulstamatiou.com/responsive-retina-blog-development-part-1
-- Use of Fontello (http://fontello.com) which is a really great font icon generator
-- Have to learn some design stuff ;)
+- Use some SMACSS principles: http://smacss.com.
+- Use of application cache for offline navigation: http://www.html5rocks.com/en/tutorials/appcache/beginner.
+- Have to learn some basic design stuff, I'm not a designer AT ALL ;)
