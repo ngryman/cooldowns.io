@@ -5,7 +5,7 @@
 I love [League of Legends] and [jungling].
 So I made this little tool to manage correctly every important jungle's cooldowns.
 
-Some great tools already exists but I wanted a simple, mobile friendly version.
+Some great tools already exist but I wanted a simple, mobile friendly version.
 You can access to [cooldowns.io] on any device with a modern browser.
 It even works offline.
 
