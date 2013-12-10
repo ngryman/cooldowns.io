@@ -1,4 +1,4 @@
-# cooldowns.io <sup>v0.0.1</sup>
+# cooldowns.io <sup>v0.0.2</sup>
 
 ## Motivations
 
