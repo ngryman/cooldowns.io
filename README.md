@@ -1,5 +1,7 @@
 # cooldowns.io <sup>v0.0.2</sup>
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ngryman/cooldowns.io.svg)](https://greenkeeper.io/)
+
 ## Motivations
 
 I love [League of Legends] and [jungling].
